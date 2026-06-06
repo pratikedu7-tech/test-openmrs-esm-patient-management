@@ -11,8 +11,8 @@ const AppointmentsCalendarView: React.FC = () => {
   const { t } = useTranslation();
   const selectedDate = useSelectedDate();
   const [calendarSelectedDate, setCalendarSelectedDate] = useState<Dayjs>(dayjs(selectedDate));
-  const period = 'monthly';
-  const { calendarEvents } = useAppointmentsCalendar(calendarSelectedDate.toISOString(), period);
+
+  const { calendarEvents } = useAppointmentsCalendar(calendarSelectedDate.toISOString(), 'monthly');
 
   return (
     <div data-testid="appointments-calendar">
